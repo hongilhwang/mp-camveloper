@@ -1,7 +1,37 @@
-import matter from 'gray-matter'
-
-// registry.json 직접 import
 import registry from '../../../registry.json'
+
+function parseFrontmatter(raw: string): { data: Record<string, unknown>; content: string } {
+  const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/)
+  if (!match) return { data: {}, content: raw }
+
+  const yamlStr = match[1]
+  const content = match[2] ?? ''
+  const data: Record<string, unknown> = {}
+
+  const lines = yamlStr.split('\n')
+  let i = 0
+  while (i < lines.length) {
+    const line = lines[i]
+    const kv = line.match(/^([\w-]+):\s*(.*)$/)
+    if (!kv) { i++; continue }
+    const key = kv[1]
+    const val = kv[2].trim()
+    if (val === '') {
+      const items: string[] = []
+      i++
+      while (i < lines.length && /^\s+-\s+/.test(lines[i])) {
+        items.push(lines[i].replace(/^\s+-\s+/, '').trim())
+        i++
+      }
+      data[key] = items
+    } else {
+      data[key] = val
+      i++
+    }
+  }
+
+  return { data, content }
+}
 
 export type RegistrySkill = {
   id: string
@@ -46,7 +76,7 @@ function loadMd(relativePath: string): ParsedItem | null {
   const key = relativePath.replace(/^\.\//, '../../../')
   const raw = mdModules[key]
   if (!raw) return null
-  const { data, content } = matter(raw)
+  const { data, content } = parseFrontmatter(raw)
   return { id: '', frontmatter: data, content, raw }
 }
 
