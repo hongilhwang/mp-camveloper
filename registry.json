@@ -28,7 +28,37 @@
         {
           "id": "react",
           "path": "./harnesses/react/agents/react.md",
-          "description": "Next.js App Router 기반 FE 개발 전문 에이전트"
+          "description": "파이프라인 오케스트레이터 — 이슈를 6단계 파이프라인으로 처리"
+        },
+        {
+          "id": "r-analyst",
+          "path": "./harnesses/react/agents/r-analyst.md",
+          "description": "이슈/요청 → 요구사항 문서 (파이프라인 1단계)"
+        },
+        {
+          "id": "r-architect",
+          "path": "./harnesses/react/agents/r-architect.md",
+          "description": "요구사항 → 기술 청사진 (파이프라인 2단계)"
+        },
+        {
+          "id": "r-inspector",
+          "path": "./harnesses/react/agents/r-inspector.md",
+          "description": "현재 코드 구조·의도·영향도 분석 (파이프라인 3단계)"
+        },
+        {
+          "id": "r-planner",
+          "path": "./harnesses/react/agents/r-planner.md",
+          "description": "청사진 + 코드 현황 → 기술 변경 계획 (파이프라인 4단계)"
+        },
+        {
+          "id": "r-executor",
+          "path": "./harnesses/react/agents/r-executor.md",
+          "description": "계획 → 실제 코드 작성/수정 (파이프라인 5단계)"
+        },
+        {
+          "id": "r-verifier",
+          "path": "./harnesses/react/agents/r-verifier.md",
+          "description": "결과 코드 + 요구사항 → 최종 검증 (파이프라인 6단계)"
         }
       ]
     }

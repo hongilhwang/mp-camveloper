@@ -10,6 +10,12 @@ skills:
   - r-review
 agents:
   - react
+  - r-analyst
+  - r-architect
+  - r-inspector
+  - r-planner
+  - r-executor
+  - r-verifier
 ---
 
 # React 하네스
@@ -162,3 +168,17 @@ useEffect(() => {
 |------|------|
 | `r-develop` | React/Next.js 컴포넌트 및 기능 코드 작성 |
 | `r-review` | 코드 리뷰 — 컨벤션, 타입, 성능, 접근성 검사 |
+
+## 에이전트 파이프라인
+
+이슈 → 분석 → 설계 → 코드파악 → 계획 → 실행 → 검증 순서로 동작하는 6단계 파이프라인.
+
+| 에이전트 | 단계 | 역할 |
+|----------|------|------|
+| `react` | — | 파이프라인 오케스트레이터 (엔트리포인트) |
+| `r-analyst` | 1 | 이슈/요청 → 요구사항 문서 |
+| `r-architect` | 2 | 요구사항 → 기술 청사진 |
+| `r-inspector` | 3 | 현재 코드 구조·의도·영향도 분석 |
+| `r-planner` | 4 | 청사진 + 코드 현황 → 기술 변경 계획 |
+| `r-executor` | 5 | 계획 → 실제 코드 작성/수정 |
+| `r-verifier` | 6 | 결과 코드 + 요구사항 → 최종 검증 |
