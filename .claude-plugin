@@ -1,0 +1,14 @@
+{
+  "name": "camveloper-marketplace",
+  "type": "marketplace",
+  "version": "1.0.0",
+  "description": "hongilhwang의 Claude Code 스킬, 에이전트, 훅 마켓플레이스",
+  "author": "hongilhwang",
+  "repository": "https://github.com/hongilhwang/mp-camveloper",
+  "registry": "./registry.json",
+  "directories": {
+    "skills": "./skills",
+    "agents": "./agents",
+    "hooks": "./hooks"
+  }
+}

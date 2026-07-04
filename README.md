@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# camveloper marketplace
 
-## Getting Started
+hongilhwang의 Claude Code 플러그인 마켓플레이스입니다.
 
-First, run the development server:
+## 마켓플레이스 등록
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+/plugin marketplace add https://github.com/hongilhwang/mp-camveloper.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 사용법
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+/plugin marketplace search <검색어>
+/plugin marketplace install <이름>
+/plugin marketplace list
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 구조
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+.claude-plugin     # 마켓플레이스 매니페스트
+registry.json      # 스킬/에이전트/훅 인덱스
+skills/            # 스킬 파일
+agents/            # 에이전트 파일
+hooks/             # 훅 파일
+```
