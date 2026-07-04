@@ -9,6 +9,7 @@
   "directories": {
     "skills": "./skills",
     "agents": "./agents",
-    "hooks": "./hooks"
+    "hooks": "./hooks",
+    "harnesses": "./harnesses"
   }
 }
