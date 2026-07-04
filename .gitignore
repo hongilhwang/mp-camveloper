@@ -43,3 +43,6 @@ next-env.d.ts
 # ui
 ui/node_modules
 ui/dist
+
+# claude local settings
+.claude/settings.local.json
