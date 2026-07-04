@@ -1,15 +1,21 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "camveloper-marketplace",
-  "type": "marketplace",
-  "version": "1.0.0",
   "description": "hongilhwang의 Claude Code 스킬, 에이전트, 훅 마켓플레이스",
-  "author": "hongilhwang",
-  "repository": "https://github.com/hongilhwang/mp-camveloper",
-  "registry": "./registry.json",
-  "directories": {
-    "skills": "./skills",
-    "agents": "./agents",
-    "hooks": "./hooks",
-    "harnesses": "./harnesses"
-  }
+  "owner": {
+    "name": "hongilhwang",
+    "email": "hongilhwang@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "react-harness",
+      "description": "FE 개발자를 위한 React/Next.js 개발 하네스 — 이슈를 6단계 파이프라인(분석→설계→검사→계획→실행→검증)으로 처리",
+      "author": {
+        "name": "hongilhwang"
+      },
+      "category": "development",
+      "source": "./harnesses/react",
+      "homepage": "https://github.com/hongilhwang/mp-camveloper"
+    }
+  ]
 }
