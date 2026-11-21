@@ -90,7 +90,7 @@ src/
 ### 핵심 타입 초안
 \`\`\`typescript
 type SomeData = { ... }
-type ComponentProps = Readonly<{ ... }>
+interface ComponentProps { ... }
 \`\`\`
 
 ### 신규 의존성 (있는 경우)

@@ -39,7 +39,7 @@ harness.md 컨벤션을 기준으로 코드를 검사하고 구체적인 개선�
 ### 🔷 TypeScript
 
 - [ ] `any` 타입 사용 여부 (금지)
-- [ ] props에 `Readonly<{}>` 미적용
+- [ ] props를 `interface`가 아닌 방식(`type`, 인라인 타입 등)으로 정의
 - [ ] `import type` 없이 타입만 import하는 경우
 - [ ] 타입 단언(`as`, `!`) 남용 여부
 - [ ] 옵셔널 체이닝(`?.`) 대신 수동 null 체크 사용 여부

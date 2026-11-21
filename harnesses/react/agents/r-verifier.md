@@ -49,8 +49,8 @@ tools:
 
 ### 6. 빌드 확인 (가능한 경우)
 ```bash
-npm run build
-npm run type-check  # tsc --noEmit
+pnpm build
+pnpm type-check  # tsc --noEmit
 ```
 
 ## 출력 형식
@@ -69,7 +69,7 @@ npm run type-check  # tsc --noEmit
 - [x] F-01: [검증 결과]
 - [ ] F-02: [미충족 이유]
 - [x] 컨벤션: react harness 컨벤션 준수
-- [x] 빌드: npm run build 통과
+- [x] 빌드: pnpm build 통과
 
 ### 컨벤션 검사 결과
 [r-review 체크리스트 기준 — 문제 항목만 보고]

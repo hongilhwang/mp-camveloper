@@ -85,7 +85,7 @@ ComponentA
 | 항목 | 준수 여부 | 비고 |
 |------|----------|------|
 | Server/Client 분리 | ✅ / ⚠️ / ❌ | |
-| Readonly props | ✅ / ⚠️ / ❌ | |
+| interface props | ✅ / ⚠️ / ❌ | |
 | 레이어 규칙 | ✅ / ⚠️ / ❌ | |
 
 ### 변경 영향도 요약

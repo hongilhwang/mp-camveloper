@@ -40,7 +40,7 @@ tools:
 `r-develop` 스킬의 체크리스트를 모든 코드에 적용한다:
 - [ ] 올바른 레이어 배치
 - [ ] Server/Client Component 적절성
-- [ ] `Readonly<{}>` props
+- [ ] props는 `interface`로 정의
 - [ ] `import type` 명시
 - [ ] Tailwind CSS만 사용
 - [ ] 접근성 속성 (`alt`, `aria-*`)
@@ -66,7 +66,7 @@ tools:
 - ✏️ MODIFY: Read → Edit 도구로 수정
 - 🗑️ DELETE: 사용자 확인 후 삭제
 - 📦 MOVE: 새 위치에 Write → 참조 업데이트 → 삭제
-- 📦 INSTALL: Bash로 npm install
+- 📦 INSTALL: Bash로 pnpm add
 ```
 
 ### 4. 체크포인트 보고
