@@ -31,7 +31,7 @@ seravie 프로젝트 기준으로 정의된 Next.js App Router 스택을 기반�
 | UI | React 19 |
 | Language | TypeScript 5 (strict) |
 | Styling | Tailwind CSS v4 |
-| Package Manager | npm |
+| Package Manager | pnpm |
 
 ## 레이어 구조
 
@@ -64,17 +64,18 @@ src/
 
 ```tsx
 // ✅ 올바른 방식
-type ButtonProps = Readonly<{
+interface ButtonProps {
   label: string;
   onClick: () => void;
   variant?: "primary" | "secondary";
-}>;
+}
 
 export default function Button({ label, onClick, variant = "primary" }: ButtonProps) { ... }
 ```
 
 ```tsx
 // ❌ 금지
+type ButtonProps = { ... } // props는 type이 아니라 interface로 정의
 function Button(props: any) { ... }
 function Button({ label, onClick }: { label: string; onClick: () => void }) { ... } // 인라인 타입
 ```

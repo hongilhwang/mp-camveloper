@@ -42,14 +42,14 @@ harness.md에 정의된 컨벤션을 항상 준수한다.
 코드 작성 전 Props 타입부터 정의한다.
 
 ```tsx
-type ComponentProps = Readonly<{
+interface ComponentProps {
   // 필수 props
   title: string;
   // 옵셔널 props
   description?: string;
   // 이벤트 핸들러
   onAction?: () => void;
-}>;
+}
 ```
 
 ### 4단계: 컴포넌트 코드 작성
@@ -58,10 +58,10 @@ type ComponentProps = Readonly<{
 ```tsx
 import type { ComponentProps } from "./types"; // 필요 시
 
-type CardProps = Readonly<{
+interface CardProps {
   title: string;
   description: string;
-}>;
+}
 
 export default function Card({ title, description }: CardProps) {
   return (
@@ -79,11 +79,11 @@ export default function Card({ title, description }: CardProps) {
 
 import { useState } from "react";
 
-type ToggleProps = Readonly<{
+interface ToggleProps {
   label: string;
   defaultChecked?: boolean;
   onChange?: (checked: boolean) => void;
-}>;
+}
 
 export default function Toggle({ label, defaultChecked = false, onChange }: ToggleProps) {
   const [checked, setChecked] = useState(defaultChecked);
@@ -129,7 +129,7 @@ export function useDebounce<T>(value: T, delay: number): T {
 - [ ] 레이어 위치가 올바른가? (`app → ui → components` 규칙)
 - [ ] Client Component가 필요한지 재확인 (불필요하면 Server로)
 - [ ] `"use client"` 위치가 파일 첫 줄인가?
-- [ ] props가 `Readonly<{}>` 로 감싸져 있는가?
+- [ ] props가 `interface`로 정의되어 있는가?
 - [ ] `import type` 을 사용했는가?
 - [ ] Tailwind 클래스만 사용했는가?
 - [ ] 외부 API 호출이 클라이언트에서 직접 발생하지 않는가?

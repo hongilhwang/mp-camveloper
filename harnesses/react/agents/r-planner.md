@@ -93,7 +93,7 @@ pipeline:
   - Props: `label: string`, `onClick: () => void`
   - Server/Client: Server Component
   - 주요 로직: ...
-- **컨벤션 적용**: Readonly props, Tailwind 스타일링
+- **컨벤션 적용**: props `interface` 정의, Tailwind 스타일링
 
 #### [순서2] ✏️ src/app/page.tsx
 - **변경 이유**: [왜 수정하는가]
@@ -104,7 +104,7 @@ pipeline:
 
 ### 패키지 설치 (있는 경우)
 \`\`\`bash
-npm install package-name
+pnpm add package-name
 \`\`\`
 
 ### 리스크 & 주의사항
